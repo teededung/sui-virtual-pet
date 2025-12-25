@@ -40,7 +40,7 @@ entry fun new_pet(house: &mut PetHouse, hunger: u64, happiness: u64, ctx: &mut T
 }
 
 entry fun feed(pet: &mut Pet) {
-    if (pet.hunger > 20) {
+    if (pet.hunger >= 20) {
         pet.hunger = pet.hunger - 20;
     } else {
         pet.hunger = 0;
